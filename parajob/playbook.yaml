@@ -1,0 +1,11 @@
+---
+ - name: Generating parameter file
+   hosts: localhost
+   vars_files:
+   - vars/var.yaml
+   tasks: 
+   - name: Creating parameter template
+     template:
+       src: templates/para.j2
+       dest: /tmp/para
+       force: yes
